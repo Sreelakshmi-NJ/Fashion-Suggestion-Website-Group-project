@@ -1,0 +1,66 @@
+hairstyles	CREATE TABLE `hairstyles` (
+ `id` int NOT NULL AUTO_INCREMENT,
+ `face_shape` varchar(255) NOT NULL,
+ `hair_type` varchar(255) NOT NULL,
+ `hairstyle_name` varchar(255) NOT NULL,
+ `image_url` varchar(255) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+outfit	CREATE TABLE `outfit` (
+ `UID` int NOT NULL AUTO_INCREMENT,
+ `BodyType` varchar(200) NOT NULL,
+ `OutfitLink` varchar(200) NOT NULL,
+ PRIMARY KEY (`UID`),
+ KEY `BodyType` (`BodyType`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+profile	CREATE TABLE `profile` (
+ `sl.no` int NOT NULL AUTO_INCREMENT,
+ `id` int NOT NULL,
+ `BodyType` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+ `EyeColour` varchar(200) NOT NULL,
+ `HairColour` varchar(200) NOT NULL,
+ `UnderTone` varchar(200) NOT NULL,
+ `SkinTone` varchar(200) NOT NULL,
+ `SkinType` varchar(225) NOT NULL,
+ `FaceShape` varchar(200) NOT NULL,
+ `hair_type` varchar(255) NOT NULL,
+ `outfit_url` varchar(225) NOT NULL,
+ `skincare_url` varchar(225) NOT NULL,
+ `hairstyle_url` varchar(225) NOT NULL,
+ `color_url` varchar(225) NOT NULL,
+ PRIMARY KEY (`sl.no`),
+ KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+signup	CREATE TABLE `signup` (
+ `id` int NOT NULL AUTO_INCREMENT,
+ `Username` varchar(50) NOT NULL,
+ `Password` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+ `Email` varchar(50) NOT NULL,
+ `role` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'user',
+ PRIMARY KEY (`id`) USING BTREE,
+ UNIQUE KEY `Email` (`Email`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+skintype	CREATE TABLE `skintype` (
+ `SkinTypeID` int NOT NULL AUTO_INCREMENT,
+ `SkinType` varchar(50) NOT NULL,
+ `Description` text NOT NULL,
+ `RoutineIMG` varchar(300) NOT NULL,
+ `skintype_url` varchar(255) NOT NULL,
+ PRIMARY KEY (`SkinTypeID`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+
+INSERT INTO `skintype` (`SkinTypeID`, `SkinType`, `Description`, `RoutineIMG`, `skintype_url`) VALUES (NULL, 'Normal', 'Normal skin is characterized by a\r\nsmooth texture and fine pores, with minimal to no sensitivity. It typically\r\nshows no blemishes and experiences few or no breakouts. Additionally, normal\r\nskin has a radiant complexion, reflecting a balanced oil and moisture level.\r\nOverall, it appears healthy and well-maintained.', 'AM_PM_Routine.webp', 'mp_normal.php'), (NULL, 'Oily', 'Oily skin is identifiable by its greasy appearance and enlarged pores, which often contribute to a shiny look. It tends to be prone to breakouts and is more likely to develop blackheads and other blemishes. This skin type results from excess sebum production, leading to a thicker texture. Overall, it requires specific care to manage oiliness and prevent acne.', 'AM_PM_Routine.webp', 'mp_oily.php'), (NULL, 'Dry', 'Dry skin can be identified by\r\nits flaky and rough texture, often resulting in an uneven appearance. It may\r\nalso feel tight and exhibit itching sensations, indicating a lack of\r\nmoisture. Additionally, dry skin tends to show more visible lines, which can\r\ngive it a dull look. Overall, it requires regular hydration and moisturizing\r\nto alleviate these symptoms.', 'AM_PM_Routine.webp', 'mp_dry.php'), (NULL, 'Combination', 'Combination skin is characterized by an oily T-zone (forehead, chin, and\r\nnose) while the cheeks may be dry or sensitive. Breakouts typically occur\r\nonly in the oily areas, and the skin often features large, open pores in\r\nthose regions. Additionally, the T-zone may appear shiny, highlighting the\r\ncontrast between the different areas of the face. Managing this skin type\r\nrequires tailored products for each zone to maintain balance.', 'AM_PM_Routine.webp', 'mp_combination.php'), (NULL, 'Sensitive', 'Sensitive skin is identified by\r\nfeelings of itchiness and tightness, often accompanied by uneven texture in\r\ndifferent areas. It may become oily during the summer and dry in winter,\r\nreacting adversely to various skincare products. This skin type can also show\r\nredness after hot baths, feel itchy when wearing tight clothing, and flush\r\neasily after consuming spicy foods. Overall, sensitive skin requires gentle\r\ncare and attention to avoid irritation.', 'AM_PM_Routine.webp', 'mp_sensitive.php')
+
+
+
+
+INSERT INTO `outfit` (`UID`, `BodyType`, `OutfitLink`) VALUES (NULL, 'hour glass', 'mp_hourbody.php'), (NULL, 'apple', 'mp_applebody.php'), (NULL, 'inverted triangle', 'mp_invertbody.php'), (NULL, 'rectangle', 'mp_rectbody.php'), (NULL, 'pear shaped', 'mp_pearbody.php')
+
+
+
+
+
+INSERT INTO `hairstyles` (`id`, `face_shape`, `hair_type`, `hairstyle_name`, `image_url`) VALUES (NULL, 'Oval', 'Straight', 'Sleek Ponytail', 'images/sleek_ponytail.jpg'), (NULL, 'Oval', 'Wavy', 'Wavy Lob', 'images/wavy_lob.jpg'), (NULL, 'Oval', 'Curly', 'Curly Shag', 'images/curly_shag.jpg'), (NULL, 'Oval', 'Coily', 'Coily Fro', 'images/coily_fro.jpg'), (NULL, 'Round', 'Straight', 'Layered Bob', 'images/layered_bob.jpg'), (NULL, 'Round', 'Wavy', 'Wavy Pixie', 'images/wavy_pixie.jpg'), (NULL, 'Round', 'Curly', 'Curly Mohawk', 'images/curly_mohawk.jpg'), (NULL, 'Round', 'Coily', 'Coily Bun', 'images/coily_bun.jpg'), (NULL, 'Square', 'Straight', 'Blunt Cut', 'images/blunt_cut.jpg'), (NULL, 'Square', 'Wavy', 'Beach Waves', 'images/beach_waves.jpg'), (NULL, 'Square', 'Curly', 'Curly Pixie', 'images/curly_pixie.jpg'), (NULL, 'Square', 'Coily', 'Coily Tapered Cut', 'images/coily_tapered.jpg'), (NULL, 'Heart', 'Straight', 'Side-Parted Lob', 'images/side_parted_lob.jpg'), (NULL, 'Heart', 'Wavy', 'Textured Bob', 'images/textured_bob.jpg'), (NULL, 'Heart', 'Curly', 'Curly Lob', 'images/curly_lob.jpg'), (NULL, 'Heart', 'Coily', 'Coily Puff', 'images/coily_puff.jpg')
