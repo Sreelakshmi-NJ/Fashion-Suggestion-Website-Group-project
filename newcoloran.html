@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>COLOR ANALYSIS</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            
+            color: white;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+ 		background-image: url('bgcloth.jpg');
+            background-size: contain; /* Optional: To cover the entire screen */
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color:white;
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: white;
+        }
+
+        /* Button styles */
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+           
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                padding: 12px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Find the right colors for you!</h1>
+    <p>Click the button below to start your analysis</p>
+    <form action="newquiz.php">
+        <input type="submit" value="Analyse">
+    </form>
+</body>
+</html>

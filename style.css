@@ -1,0 +1,74 @@
+/* Custom font and body styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Container style */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Heading styles */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+p.text-muted {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Card styles */
+.hairstyle-card {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.hairstyle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Image */
+.hairstyle-card img {
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Card title */
+.hairstyle-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Button style */
+.btn-outline-primary {
+    border-radius: 30px;
+    padding: 7px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Text center for card body */
+.card-body.text-center {
+    padding: 20px;
+}
