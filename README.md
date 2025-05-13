@@ -74,7 +74,7 @@ Recommends skincare routines based on skin type and concerns (dry, oily, sensiti
    - `www/` (for WAMP)  
 3. Start **Apache** and **MySQL** using the XAMPP/WAMP control panel.  
 4. Open your browser and go to:http://localhost/Fashion-SuggestionWebsite-Group-project-main/
-5. Use **phpMyAdmin** to import the SQL file (if provided) into your database.
+5. Use **phpMyAdmin** to import the SQL file into your database.
 
 ---
 
